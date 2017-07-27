@@ -1,0 +1,35 @@
+\chapter{On tables}
+The following is an example that showcases the usage of a tabular.
+This is not to be confused with a table which are not the same thing although it may or may not serve the same purpuso and can sometimes, but not always, have the same looks.
+
+\begin{table}[h]
+	\centering
+\begin{tabular}{ccc}
+	\hline
+	            \multicolumn{3}{c}{Estramonio}             \\ \hline
+	First month  &   1234.15   &         143234.12         \\
+	Second month & 23542342.23 &          423.12           \\ \hline
+	   Totals    & \multicolumn{2}{c}{This doesn't matter} \\ \hline
+\end{tabular}
+	\caption[A first table]{A furnicular table: Here we shall include whatever it is we estimate appropiate to be a description.}
+	\label{tab:first}
+\end{table}
+
+There you have it a beautiful tabular. We can refer to it as the \ref{tab:first} table. And it can probably be found on page \pageref{tab:first}.
+
+\lipsum
+
+\chapter{A figure}
+
+The following is an example of inserting a figure in the text. It will be accomplished with the todonotes \index{todonotes} package that will allow us to make uso of the missing figure.
+
+\begin{figure}[h]
+	\centering
+	\missingfigure{You forgot something pal…}
+	\caption[A missing figure]{This figure will illustrate my point…eventually}
+	\label{fig:miss}
+\end{figure}
+
+Now that the \ref{fig:miss} figure is inserted it can be referenced and will be included in the list of figures as being in page \pageref{fig:miss}. Even if it is actually missing.
+
+\lipsum

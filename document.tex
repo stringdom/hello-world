@@ -1,7 +1,37 @@
-\documentclass{memoir}
+% Tratare de hacer el libro más completo posible
+\documentclass[letterpaper,12pt]{memoir}
 \usepackage{polyglossia}
 \setdefaultlanguage{spanish}
-\setmainfont{Bembo Book MT}
+%\setmainfont{Bembo Book MT Std}
+\usepackage{lipsum}
+\usepackage{todonotes}
+\usepackage{microtype}
+
+\author{The author}
+\title{A book title}
+\date{2017}
+\makeindex
 \begin{document}
-	Hello world!
+	\maketitle
+	\frontmatter
+		\include{thanks}
+		\include{prologue}
+	\mainmatter
+		\part{Progress}
+		\include{chapters}
+		\part{Technicallia}
+		\include{technicals}
+	\appendix
+		\appendixpage
+		\include{appendices}
+	\backmatter
+		\chapter{Epilogue}
+		\lipsum[1-48]
+		\cleardoublepage
+		\tableofcontents
+		\cleardoublepage
+		\listoftables
+		\listoffigures
+		\cleardoublepage
+		\printindex
 \end{document}
